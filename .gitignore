@@ -30,12 +30,12 @@ wheels/
 
 # PyTorch / Deep Learning checkpoints & models
 *.pt
-*.pth
+# *.pth
 *.onnx
 *.engine
 *.tflite
 models/*.pt
-models/*.pth
+# models/# *.pth
 !models/.gitkeep
 
 # Data & Large datasets
