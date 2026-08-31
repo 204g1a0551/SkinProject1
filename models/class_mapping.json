@@ -1,0 +1,55 @@
+{
+  "classes": [
+    {
+      "code": "mel",
+      "name": "Melanoma",
+      "idx": 0,
+      "severity": "High"
+    },
+    {
+      "code": "nv",
+      "name": "Melanocytic Nevi",
+      "idx": 1,
+      "severity": "Benign"
+    },
+    {
+      "code": "bcc",
+      "name": "Basal Cell Carcinoma",
+      "idx": 2,
+      "severity": "Moderate"
+    },
+    {
+      "code": "akiec",
+      "name": "Actinic Keratoses / Intraepithelial Carcinoma",
+      "idx": 3,
+      "severity": "Precancerous"
+    },
+    {
+      "code": "bkl",
+      "name": "Benign Keratosis-like Lesions",
+      "idx": 4,
+      "severity": "Benign"
+    },
+    {
+      "code": "df",
+      "name": "Dermatofibroma",
+      "idx": 5,
+      "severity": "Benign"
+    },
+    {
+      "code": "vasc",
+      "name": "Vascular Lesions",
+      "idx": 6,
+      "severity": "Benign"
+    }
+  ],
+  "code_to_idx": {
+    "mel": 0,
+    "nv": 1,
+    "bcc": 2,
+    "akiec": 3,
+    "bkl": 4,
+    "df": 5,
+    "vasc": 6
+  }
+}

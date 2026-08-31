@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-skin-intelligent-skin-disease-detection"
+version = "0.1.0"
+description = "AI Skin: Intelligent Skin Diseases Detection using MobileNetV2, Transfer Learning, and Grad-CAM"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Mahesh Kumar" }
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+pythonpath = ["."]
+addopts = "-v --tb=short"

@@ -1,0 +1,29 @@
+{
+  "source": "sample_lesion.jpg",
+  "original_dimensions": [
+    400,
+    400
+  ],
+  "target_layer": "features.18.0",
+  "predicted_class": {
+    "idx": 3,
+    "code": "akiec",
+    "name": "Actinic Keratoses / Intraepithelial Carcinoma",
+    "severity": "Precancerous"
+  },
+  "explained_class": {
+    "idx": 3,
+    "code": "akiec",
+    "name": "Actinic Keratoses / Intraepithelial Carcinoma",
+    "confidence": 0.1839,
+    "percentage": 18.39,
+    "severity": "Precancerous"
+  },
+  "is_top_prediction": true,
+  "disclaimer": "DISCLAIMER: Grad-CAM visualizations indicate morphological feature regions that positively influenced the deep-learning model's classification score. These heatmaps are visual decision-support evidence and DO NOT constitute medical proof, definitive histological diagnosis, or a replacement for expert dermatological evaluation and biopsy.",
+  "artifacts": {
+    "original_image": "sample_lesion_original.jpg",
+    "heatmap_image": "sample_lesion_heatmap.jpg",
+    "overlay_image": "sample_lesion_overlay.jpg"
+  }
+}

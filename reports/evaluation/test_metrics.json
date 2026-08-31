@@ -1,0 +1,338 @@
+{
+  "total_samples": 13,
+  "num_classes": 7,
+  "accuracy": 0.3846,
+  "weighted_precision": 0.5064,
+  "weighted_recall": 0.3846,
+  "weighted_f1": 0.4168,
+  "macro_precision": 0.2361,
+  "macro_recall": 0.2381,
+  "macro_f1": 0.2242,
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      2,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "confusion_matrix_norm": [
+    [
+      0.0,
+      0.0,
+      0.5,
+      0.5,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.4286,
+      0.0,
+      0.2857,
+      0.2857,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "per_class": [
+    {
+      "class_idx": 0,
+      "class_code": "mel",
+      "class_name": "Melanoma",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 2
+    },
+    {
+      "class_idx": 1,
+      "class_code": "nv",
+      "class_name": "Melanocytic Nevi",
+      "precision": 0.75,
+      "recall": 0.4286,
+      "f1_score": 0.5455,
+      "support": 7
+    },
+    {
+      "class_idx": 2,
+      "class_code": "bcc",
+      "class_name": "Basal Cell Carcinoma",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1_score": 0.8,
+      "support": 2
+    },
+    {
+      "class_idx": 3,
+      "class_code": "akiec",
+      "class_name": "Actinic Keratoses / Intraepithelial Carcinoma",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    },
+    {
+      "class_idx": 4,
+      "class_code": "bkl",
+      "class_name": "Benign Keratosis-like Lesions",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 2
+    },
+    {
+      "class_idx": 5,
+      "class_code": "df",
+      "class_name": "Dermatofibroma",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    },
+    {
+      "class_idx": 6,
+      "class_code": "vasc",
+      "class_name": "Vascular Lesions",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    }
+  ],
+  "strongest_classes": [
+    {
+      "class_idx": 2,
+      "class_code": "bcc",
+      "class_name": "Basal Cell Carcinoma",
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1_score": 0.8,
+      "support": 2
+    },
+    {
+      "class_idx": 1,
+      "class_code": "nv",
+      "class_name": "Melanocytic Nevi",
+      "precision": 0.75,
+      "recall": 0.4286,
+      "f1_score": 0.5455,
+      "support": 7
+    }
+  ],
+  "weakest_classes": [
+    {
+      "class_idx": 4,
+      "class_code": "bkl",
+      "class_name": "Benign Keratosis-like Lesions",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 2
+    },
+    {
+      "class_idx": 0,
+      "class_code": "mel",
+      "class_name": "Melanoma",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 2
+    }
+  ],
+  "top_confusion_pairs": [
+    {
+      "true_class": "Melanocytic Nevi",
+      "pred_class": "Actinic Keratoses / Intraepithelial Carcinoma",
+      "count": 2,
+      "percentage_of_true": 28.57
+    },
+    {
+      "true_class": "Melanocytic Nevi",
+      "pred_class": "Benign Keratosis-like Lesions",
+      "count": 2,
+      "percentage_of_true": 28.57
+    },
+    {
+      "true_class": "Melanoma",
+      "pred_class": "Basal Cell Carcinoma",
+      "count": 1,
+      "percentage_of_true": 50.0
+    },
+    {
+      "true_class": "Melanoma",
+      "pred_class": "Actinic Keratoses / Intraepithelial Carcinoma",
+      "count": 1,
+      "percentage_of_true": 50.0
+    },
+    {
+      "true_class": "Benign Keratosis-like Lesions",
+      "pred_class": "Melanocytic Nevi",
+      "count": 1,
+      "percentage_of_true": 50.0
+    }
+  ],
+  "classification_report": {
+    "Melanoma": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 2.0
+    },
+    "Melanocytic Nevi": {
+      "precision": 0.75,
+      "recall": 0.42857142857142855,
+      "f1-score": 0.5454545454545454,
+      "support": 7.0
+    },
+    "Basal Cell Carcinoma": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1-score": 0.8,
+      "support": 2.0
+    },
+    "Actinic Keratoses / Intraepithelial Carcinoma": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "Benign Keratosis-like Lesions": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 2.0
+    },
+    "Dermatofibroma": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "Vascular Lesions": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "accuracy": 0.38461538461538464,
+    "macro avg": {
+      "precision": 0.20238095238095236,
+      "recall": 0.20408163265306123,
+      "f1-score": 0.19220779220779222,
+      "support": 13.0
+    },
+    "weighted avg": {
+      "precision": 0.5064102564102564,
+      "recall": 0.38461538461538464,
+      "f1-score": 0.4167832167832168,
+      "support": 13.0
+    }
+  },
+  "evaluation_device": "mps",
+  "model_checkpoint": "models/mobilenetv2_skin_disease_best.pth",
+  "test_manifest": "data/processed/test_manifest.csv"
+}

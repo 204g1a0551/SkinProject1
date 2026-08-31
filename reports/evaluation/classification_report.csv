@@ -1,0 +1,8 @@
+class_idx,class_code,class_name,precision,recall,f1_score,support
+0,mel,Melanoma,0.0,0.0,0.0,2
+1,nv,Melanocytic Nevi,0.75,0.4286,0.5455,7
+2,bcc,Basal Cell Carcinoma,0.6667,1.0,0.8,2
+3,akiec,Actinic Keratoses / Intraepithelial Carcinoma,0.0,0.0,0.0,0
+4,bkl,Benign Keratosis-like Lesions,0.0,0.0,0.0,2
+5,df,Dermatofibroma,0.0,0.0,0.0,0
+6,vasc,Vascular Lesions,0.0,0.0,0.0,0

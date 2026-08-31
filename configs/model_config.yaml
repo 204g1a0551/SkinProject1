@@ -1,0 +1,38 @@
+model:
+  name: "mobilenet_v2"
+  architecture: "MobileNetV2"
+  pretrained: true
+  num_classes: 7
+  input_size: [3, 224, 224]
+  dropout_rate: 0.3
+  freeze_features: true
+  unfreeze_from_layer: 14  # Unfreezes inverted residual blocks 14 to 18 in stage 2
+  weights_path: "models/mobilenetv2_skin_disease_best.pth"
+  mapping_path: "models/class_mapping.json"
+  history_path: "models/training_history.json"
+
+training:
+  stage1:
+    epochs: 10
+    learning_rate: 0.001
+    weight_decay: 0.0001
+    optimizer: "Adam"
+  stage2:
+    epochs: 15
+    learning_rate: 0.0001
+    weight_decay: 0.0001
+    optimizer: "Adam"
+  batch_size: 16
+  lr_scheduler: "ReduceLROnPlateau"  # Options: ReduceLROnPlateau, CosineAnnealingLR
+  scheduler_patience: 2
+  scheduler_factor: 0.5
+  early_stopping_patience: 5
+  early_stopping_min_delta: 0.001
+  label_smoothing: 0.05
+  use_class_weights: true
+  device: "auto"
+
+gradcam:
+  target_layer: "features.18"
+  colormap: "JET"
+  alpha: 0.4

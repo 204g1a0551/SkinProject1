@@ -1,0 +1,66 @@
+dataset:
+  name: "HAM10000 / ISIC Skin Lesion"
+  description: "Dermatoscopic skin lesion classification dataset across 7 diagnostic categories"
+  num_classes: 7
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  sample_dir: "data/sample_dataset"
+  classes:
+    - code: "mel"
+      name: "Melanoma"
+      severity: "High"
+      description: "Malignant skin cancer originating in melanocytes; requires immediate oncological evaluation."
+    - code: "nv"
+      name: "Melanocytic Nevi"
+      severity: "Benign"
+      description: "Common non-cancerous moles formed by clusters of melanocytes."
+    - code: "bcc"
+      name: "Basal Cell Carcinoma"
+      severity: "Moderate"
+      description: "Common form of skin cancer arising in the basal cell layer of the epidermis."
+    - code: "akiec"
+      name: "Actinic Keratoses / Intraepithelial Carcinoma"
+      severity: "Precancerous"
+      description: "Rough, scaly precancerous patch on sun-damaged skin that can develop into squamous cell carcinoma."
+    - code: "bkl"
+      name: "Benign Keratosis-like Lesions"
+      severity: "Benign"
+      description: "Solar lentigines, seborrheic keratoses, and lichen-planus like keratoses."
+    - code: "df"
+      name: "Dermatofibroma"
+      severity: "Benign"
+      description: "Benign fibrous nodule commonly found on the lower extremities."
+    - code: "vasc"
+      name: "Vascular Lesions"
+      severity: "Benign"
+      description: "Angiomas, angiokeratomas, pyogenic granulomas, and hemorrhage."
+
+splits:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  random_seed: 42
+  stratified: true
+
+preprocessing:
+  image_size: [224, 224]
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+
+augmentation:
+  # Medical-grade bounded augmentation parameters
+  horizontal_flip_prob: 0.5
+  vertical_flip_prob: 0.5
+  rotation_degrees: 30
+  zoom_scale_min: 0.85
+  zoom_scale_max: 1.05
+  aspect_ratio_min: 0.90
+  aspect_ratio_max: 1.10
+  brightness_factor: 0.10
+  contrast_factor: 0.10
+  saturation_factor: 0.08
+  hue_factor: 0.02
+
+imbalance:
+  severe_threshold_ratio: 10.0
+  moderate_threshold_ratio: 3.0
