@@ -1,7 +1,12 @@
 import axios from 'axios';
 import type { HealthStatus, PredictionResponse, DiseaseClassInfo } from '../types';
 
-const API_BASE = import.meta.env.VITE_API_BASE || '/api';
+// Ensure no trailing slash and append /api if not already included
+let rawBase = import.meta.env.VITE_API_BASE || '/api';
+if (rawBase.endsWith('/')) {
+  rawBase = rawBase.slice(0, -1);
+}
+const API_BASE = rawBase.endsWith('/api') ? rawBase : `${rawBase}/api`;
 
 export const fetchHealth = async (): Promise<HealthStatus> => {
   const res = await axios.get<HealthStatus>(`${API_BASE}/health`, { timeout: 10000 });
@@ -29,7 +34,7 @@ export const analyzeSkinImage = async (
     headers: {
       'Content-Type': 'multipart/form-data',
     },
-    timeout: 30000, // 30s timeout for model inference
+    timeout: 45000, // 45s timeout for model inference
   });
   return res.data;
 };
