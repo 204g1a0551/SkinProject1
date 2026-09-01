@@ -17,3 +17,6 @@ testpaths = ["tests"]
 python_files = ["test_*.py"]
 pythonpath = ["."]
 addopts = "-v --tb=short"
+
+[tool.vercel]
+entrypoint = "backend.main:app"
