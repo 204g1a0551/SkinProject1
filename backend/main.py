@@ -3,9 +3,11 @@ FastAPI application entrypoint for AI Skin: Intelligent Skin Diseases Detection.
 Configures lifespan singleton warming, CORS middleware, OpenAPI documentation, and route routing.
 """
 from contextlib import asynccontextmanager
+from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
+from fastapi.staticfiles import StaticFiles
 
 from .api.routes import router as api_router, get_inference_service
 from src import __version__
@@ -63,13 +65,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Include backend API routes under /api
 app.include_router(api_router)
 
-
-@app.get("/", include_in_schema=False)
-async def root():
-    """Redirect root path to interactive Swagger documentation."""
-    return RedirectResponse(url="/docs")
+# If frontend/dist exists, mount static files to serve the complete full-stack app
+frontend_dist = Path(__file__).resolve().parent.parent / "frontend" / "dist"
+if frontend_dist.exists():
+    app.mount("/", StaticFiles(directory=str(frontend_dist), html=True), name="static")
+else:
+    @app.get("/", include_in_schema=False)
+    async def root():
+        """Redirect root path to interactive Swagger documentation."""
+        return RedirectResponse(url="/docs")
 
 
 if __name__ == "__main__":
